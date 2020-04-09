@@ -1,8 +1,47 @@
 <template>
+  <div id="visionSection">
+    <div id="visionTitle">
+      Vision
+    </div>
+    <div id="visionExplain">
+      explain aaaaaa
+    </div>
+  </div>
 </template>
 
 <script>
+export default {
+  name: 'Vision',
+  props: {
+    msg:String
+  }
+}
 </script>
 
-<style>
+<style scoped>
+@import url(https://www.google.com/get/noto/);
+
+#visionSection {
+  background: linear-gradient(#F5F5F5);
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+#visionTitle {
+  color: #20879F;
+  font-family: 'Noto Sans';
+  font-weight: bold;
+  font-size: 18pt;
+  text-shadow:1px 1px 3px #000000;
+}
+
+#visionExplain {
+  color: #707070;
+  font-family: 'Noto Sans';
+  font-weight: bold;
+  font-size: 12pt;
+  word-wrap: break-word;
+  line-height: 0.25em;
+}
 </style>
