@@ -4,7 +4,7 @@
       About Me
     </div>
     <div id="aboutExplain">
-      ここに説明
+      <p>高知県出身のエンジニア</p>
     </div>
   </div>
 </template>
@@ -12,9 +12,6 @@
 <script>
 export default {
   name: 'About',
-  props: {
-    msg:String
-  }
 }
 </script>
 
@@ -24,7 +21,8 @@ export default {
 #aboutSection {
   background-color: #f5f5f5;
   width: 100%;
-  height: auto;
+  height: 300px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -42,5 +40,6 @@ export default {
   color: #707070;
   word-wrap: break-word;
   line-height: 0.25em;
+  padding: 20px;
 }
 </style>

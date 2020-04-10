@@ -16,9 +16,6 @@
 <script>
 export default {
   name: 'Main',
-  props: {
-    msg:String
-  }
 }
 </script>
 
@@ -40,7 +37,9 @@ export default {
   font-weight: bold;
   font-size: 25pt;
   text-shadow: 1px 1px 3px #000;
-  padding: 30px 0;
+  padding: 20px 0;
+  display: inline-block;
+  border-bottom: 3px double white;
 }
 
 #companyName {
@@ -51,12 +50,13 @@ export default {
   font-weight: bold;
   font-size: 20pt;
   text-shadow: 1px 1px 3px #000;
+  padding: 20px 0 0 0;
 }
 
 #profilePicture {
   border-radius: 50%;
   width: 64px;
   height: 64px;
-  padding: 30px 0;
+  padding: 20px 0;
 }
 </style>

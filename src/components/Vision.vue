@@ -12,9 +12,6 @@
 <script>
 export default {
   name: 'Vision',
-  props: {
-    msg:String
-  }
 }
 </script>
 

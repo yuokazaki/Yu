@@ -9,28 +9,38 @@
         <a
           href="#"
           @click="clickSmoothScroll()"
-        >・Home</a>
+        >Home</a>
       </li>
-      <a
-        href="#"
-        @click="clickSmoothScroll()"
-      ><li id="drawerMenuItem">About Me</li></a>
-      <a
-        href="#"
-        @click="clickSmoothScroll()"
-      ><li id="drawerMenuItem">Skill Sets</li></a>
-      <a
-        href="#"
-        @click="clickSmoothScroll()"
-      ><li id="drawerMenuItem">Vision</li></a>
-      <a
-        href="#"
-        @click="clickSmoothScroll()"
-      ><li id="drawerMenuItem">Customize Item1</li></a>
-      <a
-        href="#"
-        @click="clickSmoothScroll()"
-      ><li id="drawerMenuItem">Customize Item2</li></a>
+      <li id="drawerMenuItem">
+        <a
+          href="#"
+          @click="clickSmoothScroll()"
+        >About Me</a>
+      </li>
+      <li id="drawerMenuItem">
+        <a
+          href="#"
+          @click="clickSmoothScroll()"
+        >Skill Sets</a>
+      </li>
+      <li id="drawerMenuItem">
+        <a
+          href="#"
+          @click="clickSmoothScroll()"
+        >Vision</a>
+      </li>
+      <li id="drawerMenuItem">
+        <a
+          href="#"
+          @click="clickSmoothScroll()"
+        >Custmize Item1</a>
+      </li>
+      <li id="drawerMenuItem">
+        <a
+          href="#"
+          @click="clickSmoothScroll()"
+        >Custmize Item2</a>
+      </li>
     </ul>
   </div>
 </template>
@@ -38,9 +48,6 @@
 <script>
 export default {
   name: 'Menu',
-  props: {
-    msg:String
-  }
 }
 </script>
 
@@ -61,6 +68,9 @@ export default {
 
 #drawerMenuItem {
   background-color: #fff;
+  list-style-type: disc;/* リストの左側に黒丸 */
+  margin-left: 40px;/* リストの左側に余白 */
+  text-align: left;
   width: 100%;
   height: 50px;
 }

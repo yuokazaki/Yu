@@ -3,30 +3,43 @@
     <div id="skillTitle">
       Skill Set
     </div>
-    <div id="SkillExplain">
-      skillの説明
+
+    <div id="skillExplain">
+      <p>skillの説明</p>
     </div>
+
+    <label id="gitHubLabel" />
+
     <a
       id="gitHubLink"
       href="https://github.com/yuuokazaki"
+      target="_blank"
     >GitHub：https://github.com/yuuokazaki</a>
-    <label id="gitHubLabel" />
-    <a id="skillCategories" />
+
+    <a
+      id="skillCategories"
+      href="#"
+    ><p>Front-end</p></a>
+    <a
+      id="skillCategories"
+      href="#"
+    ><p>Back-end</p></a>
+    <a
+      id="skillCategories"
+      href="#"
+    ><p>DevOps</p></a>
+
     <div id="skillList">
-      skillList
+      Html
     </div>
-    <div id="skillGraph">
-      Graph
-    </div>
+
+    <div id="skillGraph" />
   </div>
 </template>
 
 <script>
 export default {
   name: 'Skill',
-  props: {
-    msg:String, Array
-  }
 }
 </script>
 
@@ -36,7 +49,8 @@ export default {
 #skillSection {
   background-color: #fff;
   width: 100%;
-  height: auto;
+  height: 500px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -59,6 +73,7 @@ export default {
   font-size: 12pt;
   word-wrap: break-word;
   line-height: 0.25em;
+  padding: 20px;
 }
 
 #gitHubLabel {
@@ -68,6 +83,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   font-weight: bold;
   font-size: 12pt;
+  padding: 20px;
 }
 
 #gitHubLink {
@@ -77,9 +93,15 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   font-weight: bold;
   font-size: 12pt;
+  text-decoration: none;
+}
+
+#gitHubLink:hover {
+  text-decoration: underline;
 }
 
 #skillCategories {
+  display: inline-block;
   background: linear-gradient(#b51a1a, #0f8839, #571083);
   opacity: 75%;
 }
