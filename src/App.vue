@@ -19,7 +19,6 @@ import Vision from './components/Vision.vue'
 import Footer from './components/Footer.vue'
 import Menu from './components/Footer.vue'
 
-
 export default {
   name: 'App',
   components: {
@@ -33,7 +32,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

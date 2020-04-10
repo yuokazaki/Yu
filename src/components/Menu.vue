@@ -1,23 +1,53 @@
 <template>
   <div id="drawerSection">
-    <img id="drawerButton" src="">
-      <ul id="drawerMenuSection">
-        <a href="#" @click="clickSmoothScroll()"><li id="drawerMenuItem">Home</li></a>
-        <a href="#" @click="clickSmoothScroll()"><li id="drawerMenuItem">About Me</li></a>
-        <a href="#" @click="clickSmoothScroll()"><li id="drawerMenuItem">Skill Sets</li></a>
-        <a href="#" @click="clickSmoothScroll()"><li id="drawerMenuItem">Vision</li></a>
-        <a href="#" @click="clickSmoothScroll()"><li id="drawerMenuItem">Customize Item1</li></a>
-        <a href="#" @click="clickSmoothScroll()"><li id="drawerMenuItem">Customize Item2</li></a>
-      </ul>
+    <img
+      id="drawerButton"
+      src=""
+    >
+    <ul id="drawerMenuSection">
+      <li id="drawerMenuItem">
+        <a
+          href="#"
+          @click="clickSmoothScroll()"
+        >Home</a>
+      </li>
+      <li id="drawerMenuItem">
+        <a
+          href="#"
+          @click="clickSmoothScroll()"
+        >About Me</a>
+      </li>
+      <li id="drawerMenuItem">
+        <a
+          href="#"
+          @click="clickSmoothScroll()"
+        >Skill Sets</a>
+      </li>
+      <li id="drawerMenuItem">
+        <a
+          href="#"
+          @click="clickSmoothScroll()"
+        >Vision</a>
+      </li>
+      <li id="drawerMenuItem">
+        <a
+          href="#"
+          @click="clickSmoothScroll()"
+        >Custmize Item1</a>
+      </li>
+      <li id="drawerMenuItem">
+        <a
+          href="#"
+          @click="clickSmoothScroll()"
+        >Custmize Item2</a>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
   name: 'Menu',
-  props: {
-    msg:String
-  }
 }
 </script>
 
@@ -25,26 +55,31 @@ export default {
 @import url(https://www.google.com/get/noto/);
 
 #drawerSection {
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   width: 100%;
   height: auto;
 }
 
 #drawerMenuSection {
-  background-color: #ffffff;
+  background-color: #fff;
   width: 100%;
   height: auto;
 }
 
 #drawerMenuItem {
-  background-color: #ffffff;
+  background-color: #fff;
+  list-style-type: disc;/* リストの左側に黒丸 */
+  margin-left: 40px;/* リストの左側に余白 */
+  text-align: left;
   width: 100%;
   height: 50px;
 }
 
 #drawerMenuItemLink {
   color: #707070;
-  font-family: 'Noto Sans';
+  font-family: 'Noto Sans', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 12pt;
   word-wrap: none;
 }
