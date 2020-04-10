@@ -22,18 +22,20 @@ export default {
 @import url(https://www.google.com/get/noto/);
 
 #aboutSection {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   width: 100%;
   height: auto;
   text-align: center;
 }
 
 #aboutTitle {
-  color:#20879F;
-  font-family: 'Noto Sans';
+  color: #20879f;
+  font-family: 'Noto Sans', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   font-weight: bold;
   font-size: 18pt;
-  text-shadow:1px 1px 3px #000000;
+  text-shadow: 1px 1px 3px #000;
 }
 
 #aboutExplain {
