@@ -2,7 +2,9 @@
   <div id="drawerSection">
     <img id="drawerButton" src="">
       <ul id="drawerMenuSection">
-        <a href="#" @click="clickSmoothScroll()"><li id="drawerMenuItem">Home</li></a>
+        <li id="drawerMenuItem">
+          <a href="#" @click="clickSmoothScroll()">・Home</a>
+        </li>
         <a href="#" @click="clickSmoothScroll()"><li id="drawerMenuItem">About Me</li></a>
         <a href="#" @click="clickSmoothScroll()"><li id="drawerMenuItem">Skill Sets</li></a>
         <a href="#" @click="clickSmoothScroll()"><li id="drawerMenuItem">Vision</li></a>
