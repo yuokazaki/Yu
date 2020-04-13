@@ -1,42 +1,47 @@
 <template>
   <div id="drawerSection">
-    <img
-      id="drawerButton"
-      src=""
-    >
+    <span id="headerButton"><img
+      src="../assets/image/drawerBatsu.png"
+    ></span>
     <ul id="drawerMenuSection">
       <li id="drawerMenuItem">
         <a
-          href="#"
+          id="drawerMenuItemLink"
+          href="#app"
           @click="clickSmoothScroll()"
         >Home</a>
       </li>
       <li id="drawerMenuItem">
         <a
-          href="#"
+          id="drawerMenuItemLink"
+          href="#aboutSection"
           @click="clickSmoothScroll()"
         >About Me</a>
       </li>
       <li id="drawerMenuItem">
         <a
-          href="#"
+          id="drawerMenuItemLink"
+          href="#skillSection"
           @click="clickSmoothScroll()"
         >Skill Sets</a>
       </li>
       <li id="drawerMenuItem">
         <a
-          href="#"
+          id="drawerMenuItemLink"
+          href="#visionSection"
           @click="clickSmoothScroll()"
         >Vision</a>
       </li>
       <li id="drawerMenuItem">
         <a
+          id="drawerMenuItemLink"
           href="#"
           @click="clickSmoothScroll()"
         >Custmize Item1</a>
       </li>
       <li id="drawerMenuItem">
         <a
+          id="drawerMenuItemLink"
           href="#"
           @click="clickSmoothScroll()"
         >Custmize Item2</a>
@@ -47,40 +52,73 @@
 
 <script>
 export default {
-  name: 'Menu',
+  methods: {
+    clickSmoothScroll () {
+      event.preventDefault()
+      this.$SmoothScroll(
+        document.querySelector('#hoge'),
+        400,
+        null,
+        null,
+        'y'
+      )
+    }
+  }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 @import url(https://www.google.com/get/noto/);
 
 #drawerSection {
   background-color: #f3f3f3;
   width: 100%;
-  height: auto;
-}
-
-#drawerMenuSection {
-  background-color: #fff;
-  width: 100%;
-  height: auto;
-}
-
-#drawerMenuItem {
-  background-color: #fff;
-  list-style-type: disc;/* リストの左側に黒丸 */
-  margin-left: 40px;/* リストの左側に余白 */
-  text-align: left;
-  width: 100%;
   height: 50px;
-}
 
-#drawerMenuItemLink {
-  color: #707070;
-  font-family: 'Noto Sans', cursive;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 12pt;
-  word-wrap: none;
+  img {
+    float: right;
+    width: 30px;
+    height: 30px;
+  }
+
+  #drawerButoon {
+    background-color: #f3f3f3;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    max-width: 768px;
+    top: 0;
+    left: 0;
+  }
+
+  #drawerMenuSection,
+  #drawerMenuItem {
+    background-color: #fff;
+    width: 100%;
+    height: 0 auto;
+  }
+
+  #drawerMenuSection {
+    margin-top: 10px;
+  }
+
+  #drawerMenuItem {
+    height: 50px;
+    border-bottom: 0.2px solid #707070;
+  }
+
+  #drawerMenuItemLink {
+    font-family: 'Noto Sans', cursive;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #707070;
+    font-size: 12px;
+    border-bottom: 2px solid #fff;
+    display: block;
+    position: relative;
+    text-decoration: none;
+    top: 10px;
+    padding: 10px;
+  }
 }
 </style>

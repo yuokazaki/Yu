@@ -5,7 +5,9 @@
     </div>
 
     <div id="skillExplain">
-      <p>skillの説明</p>
+      <p>
+        skillの説明だああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+      </p>
     </div>
 
     <label id="gitHubLabel" />
@@ -33,13 +35,20 @@
       Html
     </div>
 
-    <div id="skillGraph" />
+    <div id="skillGraph">
+      <h1>棒グラフと線グラフ</h1>
+      <chart />
+    </div>
   </div>
 </template>
 
 <script>
+import Chart from '../components/Chart';
+
 export default {
-  name: 'Skill',
+  components: {
+    Chart
+  },
 }
 </script>
 
@@ -49,7 +58,7 @@ export default {
 #skillSection {
   background-color: #fff;
   width: 100%;
-  height: 500px;
+  height: auto;
   padding: 10px;
   text-align: center;
 }
@@ -71,8 +80,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   font-weight: bold;
   font-size: 12pt;
-  word-wrap: break-word;
-  line-height: 0.25em;
+  word-break: break-all;
+  line-height: 1.7;
+  margin: auto;
+  width: 60%;
   padding: 20px;
 }
 
