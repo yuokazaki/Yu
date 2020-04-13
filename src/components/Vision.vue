@@ -4,15 +4,14 @@
       Vision
     </div>
     <div id="visionExplain">
-      explain aaaaaa
+      <p>
+        高知県出身のエンジニアです。専門学校・・・あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+      </p>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'Vision',
-}
 </script>
 
 <style scoped>
@@ -20,9 +19,10 @@ export default {
 
 #visionSection {
   background: linear-gradient(#f5f5f5);
-  width: 100%;
-  height: auto;
   text-align: center;
+  width: 100%;
+  height: 300px;
+  padding: 20px 0;
 }
 
 #visionTitle {
@@ -33,6 +33,7 @@ export default {
   font-weight: bold;
   font-size: 18pt;
   text-shadow: 1px 1px 3px #000;
+  padding: 30px;
 }
 
 #visionExplain {
@@ -42,7 +43,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   font-weight: bold;
   font-size: 12pt;
-  word-wrap: break-word;
-  line-height: 0.25em;
+  word-break: break-all;
+  line-height: 1.7;
+  margin: auto;
+  width: 60%;
 }
 </style>

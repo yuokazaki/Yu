@@ -4,15 +4,14 @@
       About Me
     </div>
     <div id="aboutExplain">
-      <p>高知県出身のエンジニア</p>
+      <p>
+        あああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+      </p>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'About',
-}
 </script>
 
 <style scoped>
@@ -34,12 +33,14 @@ export default {
   font-weight: bold;
   font-size: 18pt;
   text-shadow: 1px 1px 3px #000;
+  padding: 30px;
 }
 
 #aboutExplain {
   color: #707070;
-  word-wrap: break-word;
-  line-height: 0.25em;
-  padding: 20px;
+  word-break: break-all;
+  line-height: 1.7;
+  margin: auto;
+  width: 60%;
 }
 </style>

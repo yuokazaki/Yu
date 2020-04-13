@@ -14,9 +14,6 @@
 </template>
 
 <script>
-export default {
-  name: 'Main',
-}
 </script>
 
 <style scoped>
@@ -27,6 +24,9 @@ export default {
   width: 100%;
   height: 230px;
   text-align: center;
+  margin-top: 40px;
+  min-height: 200px;
+  border-bottom: solid 1px #80e1f7;
 }
 
 #userName {

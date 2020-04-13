@@ -39,6 +39,8 @@ export default {
   width: 100%;
   height: auto;
   padding: 10px;
+  position: fixed;
+  top: 0;
 }
 
 #headerButton {
@@ -53,12 +55,10 @@ export default {
   position: relative;
 }
 
-/* チェックボックス等は非表示に */
 .nav-unshown {
   display: none;
 }
 
-/* アイコンのスペース */
 #nav-open {
   display: inline-block;
   width: 30px;
@@ -66,13 +66,12 @@ export default {
   vertical-align: middle;
 }
 
-/* ハンバーガーアイコンをCSSだけで表現 */
 #nav-open span,
 #nav-open span::before,
 #nav-open span::after {
   position: absolute;
-  height: 3px;/* 線の太さ */
-  width: 25px;/* 長さ */
+  height: 3px;
+  width: 25px;
   border-radius: 3px;
   background: #555;
   display: block;
@@ -88,12 +87,11 @@ export default {
   bottom: -16px;
 }
 
-/* 閉じる用の薄黒カバー */
 #nav-close {
-  display: none;/* はじめは隠しておく */
+  display: none;
   position: fixed;
   z-index: 99;
-  top: 0;/* 全体に広がるように */
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -102,31 +100,29 @@ export default {
   transition: 0.3s ease-in-out;
 }
 
-/* 中身 */
 #nav-content {
   overflow: auto;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;/* 最前面に */
-  width: 90%;/* 右側に隙間を作る（閉じるカバーを表示） */
-  max-width: 330px;/* 最大幅（調整してください） */
+  z-index: 9999;
+  width: 90%;
+  max-width: 330px;
   height: 100%;
-  background: #fff;/* 背景色 */
-  transition: 0.3s ease-in-out;/* 滑らかに表示 */
+  background: #fff;
+  transition: 0.3s ease-in-out;
   -webkit-transform: translateX(-105%);
-  transform: translateX(-105%);/* 左に隠しておく */
+  transform: translateX(-105%);
 }
 
-/* チェックが入ったらもろもろ表示 */
 #nav-input:checked ~ #nav-close {
-  display: block;/* カバーを表示 */
+  display: block;
   opacity: 0.5;
 }
 
 #nav-input:checked ~ #nav-content {
   -webkit-transform: translateX(0%);
-  transform: translateX(0%);/* 中身を表示（右へスライド） */
+  transform: translateX(0%);
   box-shadow: 6px 0 25px rgba(0, 0, 0, 0.15);
 }
 </style>
