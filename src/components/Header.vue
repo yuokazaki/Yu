@@ -38,9 +38,10 @@ export default {
   background-color: #f3f3f3;
   width: 100%;
   height: auto;
-  padding: 10px;
   position: fixed;
+  z-index: 500;
   top: 0;
+  padding: 10px;
 }
 
 #headerButton {

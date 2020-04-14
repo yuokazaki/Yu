@@ -21,7 +21,7 @@ export default {
     clickSmoothScroll () {
       event.preventDefault()
       this.$SmoothScroll(
-        document.querySelector('#hoge'),
+        document.querySelector('#app'),
         400,
         null,
         null,
