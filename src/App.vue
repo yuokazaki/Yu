@@ -1,5 +1,8 @@
 <template>
-  <div id="app">
+  <div
+    id="app"
+    class="wrap"
+  >
     <Header />
     <Main />
     <About />
@@ -29,3 +32,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.wrap {
+  overflow: hidden;
+}
+</style>

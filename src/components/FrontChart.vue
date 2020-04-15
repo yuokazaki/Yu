@@ -12,7 +12,7 @@ export default {
         datasets: [
           {
             label: 'Flont-End',
-            data: [10, 20, 30, 40, 50, 30],
+            data: [50, 50, 20, 20, 30],
             backgroundColor: [
               'rgba(181, 26, 26, 0.5)',
             ],
@@ -22,7 +22,6 @@ export default {
               'rgba(255, 206, 86, 1)',
               'rgba(75, 192, 192, 1)',
               'rgba(153, 102, 255, 1)',
-              'rgba(255, 159, 64, 1)'
             ],
             borderWidth: 1
           }

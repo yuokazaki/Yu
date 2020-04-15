@@ -1,15 +1,13 @@
 <template>
   <div id="skillSection">
     <div id="skillTitle">
-      Skill Set
+      Skill Sets
     </div>
-
     <div id="skillExplain">
       <p>
-        skillの説明だああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+        まだまだ経験がないですが、スキルをまとめました。全体的に浅く広くです。自分一人で制作した事があるのは、LPと簡単なWebサイトです。今回ポートフォリオの作成で、フロントエンドのスキルがかなり身につきました。また、フレームワークを使った開発や、git・gitHubの使い方も学ぶ事ができました。バックエンドでの開発経験はありません。Javaを使ったコーディングは、少しだけ経験した事があります。
       </p>
     </div>
-
     <label id="gitHubLabel">
       GitHub：
       <a
@@ -18,34 +16,32 @@
         target="_blank"
       >https://github.com/yuuokazaki</a>
     </label>
-
     <div id="skillCategories">
       <ul>
         <li>
           <span
             id="front"
-            @click="frontChange"
+            @click="setCurrentChart('front')"
           >Front-end</span>
         </li>
         <li>
           <span
             id="back"
-            @click="backChange"
+            @click="setCurrentChart('back')"
           >Back-end</span>
         </li>
         <li>
           <span
             id="dev"
-            @click="devChange"
+            @click="setCurrentChart('dev')"
           >DevOps</span>
         </li>
       </ul>
     </div>
-
     <div id="skillList">
       <ul
         id="frontEnd"
-        :class="{'front-change': frontC}"
+        :class="{'front-change': isFrontActive}"
       >
         <li>HTML</li>
         <li>CSS</li>
@@ -55,7 +51,7 @@
       </ul>
       <ul
         id="backEnd"
-        :class="{'back-change': backC}"
+        :class="{'back-change': isBackActive}"
       >
         <li>Java</li>
         <li>Ruby</li>
@@ -64,7 +60,7 @@
       </ul>
       <ul
         id="devOps"
-        :class="{'dev-change': devC}"
+        :class="{'dev-change': isDevActive}"
       >
         <li>Linux</li>
         <li>Node</li>
@@ -73,14 +69,13 @@
         <li>Firebase</li>
       </ul>
     </div>
-
-    <div v-if="frontChange">
+    <div v-if="isFrontActive">
       <FrontChart />
     </div>
-    <div v-if="backChange">
+    <div v-if="isBackActive">
       <BackChart />
     </div>
-    <div v-if="devChange">
+    <div v-if="isDevActive">
       <DevChart />
     </div>
   </div>
@@ -99,12 +94,25 @@ export default {
   },
   data(){
     return {
-      frontChange: true,
-      backChange: true,
-      devChange: true  //とりあえずtrueで表示しています
+      currentChart: 'front'
     }
   },
-
+  computed: {
+    isFrontActive() {
+      return this.currentChart=='front';
+    },
+    isBackActive() {
+      return this.currentChart=='back';
+    },
+    isDevActive() {
+      return this.currentChart=='dev';
+    }
+  },
+  methods: {
+    setCurrentChart(chart) {
+      this.currentChart = chart;
+    }
+  }
 }
 </script>
 
@@ -125,7 +133,7 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     font-weight: bold;
     font-size: 18pt;
-    text-shadow: 1px 1px 3px #000;
+    text-shadow: 1px 1px 3px gray;
     padding: 30px;
   }
 
@@ -151,19 +159,22 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     font-weight: bold;
     font-size: 12pt;
+    display: inline-block;
     padding: 20px 0;
     text-decoration: none;
-  }
 
-  #gitHubLink:hover {
-    text-decoration: underline;
+    #gitHubLink:hover {
+      text-decoration: underline;
+    }
   }
 
   #skillCategories {
-    /* display: inline-block;
-      background: linear-gradient(#b51a1a, #0f8839, #571083);
-      opacity: 75%; */
     padding: 20px 0;
+
+    li {
+      display: inline-block;
+      margin: 0 10px;
+    }
 
     #front {
       color: #b51a1a;
@@ -185,30 +196,50 @@ export default {
   }
 
   #skillList {
-    /* background: linear-gradient(#b51a1a, #0f8839, #571083);
-      opacity: 75%;
-      display: inline-block; */
     width: auto;
     font-size: 18px;
     border-bottom: 2px solid #f3f3f3;
+    padding: 10px 0 50px 0;
 
     li {
       display: inline-block;
+      margin: 10px 10px;
     }
 
-    #frontEnd {
-      color: #b51a1a;
-      font-size: 20px;
+    .front-change li {
+      background-color: rgba(181, 26, 26, 0.4);
     }
 
-    #backEnd {
-      color: #0f8839;
-      font-size: 20px;
+    .back-change li {
+      background-color: rgba(15, 136, 57, 0.4);
     }
 
-    #devOps {
-      color: #571083;
-      font-size: 20px;
+    .dev-change li {
+      background-color: rgba(87, 16, 131, 0.4);
+    }
+
+    #frontEnd li {
+      color: rgba(181, 26, 26, 0.75);
+      height: 30px;
+      font-weight: bold;
+      padding: 12px 20px 2px 20px;
+      box-shadow: 0 0 8px gray;
+    }
+
+    #backEnd li {
+      color: rgba(15, 136, 57, 0.75);
+      height: 30px;
+      font-weight: bold;
+      padding: 12px 20px 2px 20px;
+      box-shadow: 0 0 8px gray;
+    }
+
+    #devOps li {
+      color: rgba(87, 16, 131, 0.75);
+      height: 30px;
+      font-weight: bold;
+      padding: 12px 20px 2px 20px;
+      box-shadow: 0 0 8px gray;
     }
   }
 }
