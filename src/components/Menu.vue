@@ -1,8 +1,9 @@
 <template>
   <div id="drawerSection">
-    <span id="headerButton"><img
+    <label for="nav-input"><img
+      id="headerButton"
       src="../assets/image/drawerBatsu.png"
-    ></span>
+    ></label>
     <ul id="drawerMenuSection">
       <li id="drawerMenuItem">
         <a
@@ -32,7 +33,7 @@
           @click="clickSmoothScroll()"
         >Vision</a>
       </li>
-      <li id="drawerMenuItem">
+      <!--<li id="drawerMenuItem">
         <a
           id="drawerMenuItemLink"
           href="#"
@@ -45,7 +46,7 @@
           href="#"
           @click="clickSmoothScroll()"
         >Custmize Item2</a>
-      </li>
+      </li>-->
     </ul>
   </div>
 </template>
@@ -71,18 +72,18 @@ export default {
 @import url(https://www.google.com/get/noto/);
 
 #drawerSection {
-  background-color: #f3f3f3;
+  background-color: red;
   width: 100%;
-  height: 50px;
+  height: 120px;
 
   img {
     float: right;
     width: 30px;
     height: 30px;
+    cursor: pointer;
   }
 
   #drawerButoon {
-    background-color: #f3f3f3;
     width: 100%;
     height: 50px;
     position: fixed;
