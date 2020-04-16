@@ -1,52 +1,29 @@
 <template>
   <div id="drawerSection">
-    <label for="nav-input"><img
-      id="headerButton"
-      src="../assets/image/drawerBatsu.png"
-    ></label>
-    <ul id="drawerMenuSection">
-      <li id="drawerMenuItem">
-        <a
-          id="drawerMenuItemLink"
-          href="#app"
-          @click="clickSmoothScroll()"
-        >Home</a>
+    <div id="drawerBatsuButton">
+      <label for="nav-input">
+        <img
+          id="drawerClose"
+          src="../assets/image/drawerBatsu.png"
+        >
+      </label>
+    </div>
+    <ul
+      id="drawerMenuSection"
+      style="list-style: disc;"
+    >
+      <li @click="closeMenu">
+        ・<a href="#app">Home</a>
       </li>
-      <li id="drawerMenuItem">
-        <a
-          id="drawerMenuItemLink"
-          href="#aboutSection"
-          @click="clickSmoothScroll()"
-        >About Me</a>
+      <li @click="closeMenu">
+        ・<a href="#aboutSection">About Me</a>
       </li>
-      <li id="drawerMenuItem">
-        <a
-          id="drawerMenuItemLink"
-          href="#skillSection"
-          @click="clickSmoothScroll()"
-        >Skill Sets</a>
+      <li @click="closeMenu">
+        ・<a href="#skillSection">Skill Set</a>
       </li>
-      <li id="drawerMenuItem">
-        <a
-          id="drawerMenuItemLink"
-          href="#visionSection"
-          @click="clickSmoothScroll()"
-        >Vision</a>
+      <li @click="closeMenu">
+        ・<a href="#visionSection">Vision</a>
       </li>
-      <!--<li id="drawerMenuItem">
-        <a
-          id="drawerMenuItemLink"
-          href="#"
-          @click="clickSmoothScroll()"
-        >Custmize Item1</a>
-      </li>
-      <li id="drawerMenuItem">
-        <a
-          id="drawerMenuItemLink"
-          href="#"
-          @click="clickSmoothScroll()"
-        >Custmize Item2</a>
-      </li>-->
     </ul>
   </div>
 </template>
@@ -54,6 +31,9 @@
 <script>
 export default {
   methods: {
+    closeMenu() {
+      this.$emit('close')
+    },
     clickSmoothScroll () {
       event.preventDefault()
       this.$SmoothScroll(
@@ -72,54 +52,44 @@ export default {
 @import url(https://www.google.com/get/noto/);
 
 #drawerSection {
-  background-color: red;
+  font-family: 'Noto Sans', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   width: 100%;
-  height: 120px;
+  height: auto;
 
-  img {
-    float: right;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-  }
+  #drawerBatsuButton {
+    text-align: right;
+    padding: 10px 10px;
+    background: #f3f3f3;
 
-  #drawerButoon {
-    width: 100%;
-    height: 50px;
-    position: fixed;
-    max-width: 768px;
-    top: 0;
-    left: 0;
-  }
-
-  #drawerMenuSection,
-  #drawerMenuItem {
-    background-color: #fff;
-    width: 100%;
-    height: 0 auto;
+    img {
+      width: 25px;
+      height: 25px;
+      background: #f3f3f3;
+    }
   }
 
   #drawerMenuSection {
-    margin-top: 10px;
-  }
+    background-color: #fff;
+    width: 100%;
+    height: auto;
 
-  #drawerMenuItem {
-    height: 50px;
-    border-bottom: 0.2px solid #707070;
-  }
+    li {
+      color: #a8a3a3;
+      font-weight: bold;
+      display: block;
+      border-top: solid 1px #f3f3f3;
+      border-bottom: solid 1px #f3f3f3;
+      padding: 10px 100px 10px 5px;
+      font-size: 25px;
+      white-space: nowrap;
+    }
 
-  #drawerMenuItemLink {
-    font-family: 'Noto Sans', cursive;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #707070;
-    font-size: 12px;
-    border-bottom: 2px solid #fff;
-    display: block;
-    position: relative;
-    text-decoration: none;
-    top: 10px;
-    padding: 10px;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
   }
 }
 </style>

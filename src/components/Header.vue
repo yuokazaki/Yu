@@ -3,6 +3,7 @@
     <div id="nav-drawer">
       <input
         id="nav-input"
+        v-model="checked"
         type="checkbox"
         class="nav-unshown"
       >
@@ -16,7 +17,7 @@
         for="nav-input"
       />
       <div id="nav-content">
-        <Menu />
+        <Menu @close="closeMenuEvent" />
       </div>
     </div>
   </div>
@@ -26,9 +27,18 @@
 import Menu from "../components/Menu.vue"
 
 export default {
-  name: "Header",
   components: {
     Menu
+    },
+    data() {
+      return {
+        checked:false
+      }
+    },
+    methods: {
+      closeMenuEvent() {
+        this.checked=false
+      }
     }
   }
 </script>
@@ -37,23 +47,16 @@ export default {
 #headerSection {
   background-color: #f3f3f3;
   width: 100%;
-  height: auto;
+  height: 40px;
+  text-align: left;
   position: fixed;
-  z-index: 500;
-  top: 0;
-  padding: 10px;
-}
-
-#headerButton {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  width: 100%;
-  height: auto;
 }
 
 #nav-drawer {
   position: relative;
+  width: 100px;
+  top: 10px;
+  left: 10px;
 }
 
 .nav-unshown {
@@ -111,7 +114,7 @@ export default {
   max-width: 330px;
   height: 100%;
   background: #fff;
-  transition: 0.3s ease-in-out;
+  transition: 0.6s ease-in-out;
   -webkit-transform: translateX(-105%);
   transform: translateX(-105%);
 }
