@@ -1,17 +1,34 @@
 <template>
   <div id="footerSection">
+    <a
+      href="#app"
+      @click="clickSmoothScroll()"
+    >
+      <img
+        id="footerScroll"
+        src="../assets//image/footerButton.png"
+      >
+    </a>
     <div id="footerCopyright">
-      a
-    </div>
-    <div id="footerScroll">
-      a
+      &copy; Seattleconsulting
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Footer',
+  methods: {
+    clickSmoothScroll () {
+      event.preventDefault()
+      this.$SmoothScroll(
+        document.querySelector('#app'),
+        400,
+        null,
+        null,
+        'y'
+      )
+    }
+  }
 }
 </script>
 
@@ -21,8 +38,17 @@ export default {
 #footerSection {
   background: linear-gradient(#80e1f7, #06c1e6);
   width: 100%;
-  height: auto;
+  height: 60px;
   text-align: center;
+}
+
+#footerScroll {
+  width: 25px;
+  height: 25px;
+  border: 3px solid #06c1e6;
+  border-radius: 50%;
+  top: -15px;
+  position: relative;
 }
 
 #footerCopyright {
@@ -33,9 +59,7 @@ export default {
   font-weight: bold;
   font-size: 12pt;
   text-shadow: 1px 1px 3px #000;
-}
-
-#footerScroll {
-  height: auto;
+  top: -10px;
+  position: relative;
 }
 </style>

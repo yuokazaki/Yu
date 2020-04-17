@@ -1,12 +1,14 @@
 <template>
-  <div id="app">
+  <div
+    id="app"
+    class="wrap"
+  >
     <Header />
     <Main />
     <About />
     <Skill />
     <Vision />
     <Footer />
-    <Menu />
   </div>
 </template>
 
@@ -17,7 +19,6 @@ import About from './components/About.vue'
 import Skill from './components/Skill.vue'
 import Vision from './components/Vision.vue'
 import Footer from './components/Footer.vue'
-import Menu from './components/Footer.vue'
 
 export default {
   name: 'App',
@@ -27,8 +28,21 @@ export default {
     About,
     Skill,
     Vision,
-    Footer,
-    Menu
+    Footer
   }
 }
 </script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  width: 100%;
+}
+
+.wrap {
+  overflow: hidden;
+}
+</style>
