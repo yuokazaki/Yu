@@ -55,8 +55,8 @@
 
 #profilePicture {
   border-radius: 50%;
-  width: 64px;
-  height: 64px;
+  width: 110px;
+  height: 110px;
   padding: 20px 0;
 }
 </style>

@@ -5,7 +5,7 @@
     </div>
     <div id="skillExplain">
       <p>
-        まだまだ経験が足りないですが、スキルをまとめました。全体的に浅く広くです。自分一人で制作した事があるのは、LP（HTML,CSS)です。今回ポートフォリオの作成で、フロントエンドのスキルがかなり身につきました。また、フレームワークを使った開発や、git・gitHubの使い方も学ぶ事ができました。バックエンドでの開発経験はありません。JavaやRubyの言語を、少し触ったくらいです。
+        まだまだ経験が足りないですが、スキルをまとめました。全体的に浅く広くです。自分一人で制作した事があるのは、LP（HTML,CSS)です。今回ポートフォリオの作成で、フロントエンドのスキルがかなり身につきました。また、フレームワークを使った開発や、git・gitHubの使い方も学ぶ事ができました。バックエンドでの開発経験はありません。JavaやRubyの言語を、少し触りました。
       </p>
     </div>
     <label id="gitHubLabel">
@@ -141,9 +141,7 @@ export default {
 
   #skillExplain {
     color: #707070;
-    font-family: 'Noto Sans', cursive;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Noto Sans JP', sans-serif;
     font-weight: bold;
     font-size: 12pt;
     word-break: break-all;
