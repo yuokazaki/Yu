@@ -5,7 +5,7 @@
     </div>
     <div id="aboutExplain">
       <p>
-        初めまして！平成１１年生まれの新卒エンジニアです。出身は高知県で、高校卒業後上京。その後、情報系の専門学校に進学し、新卒でITベンチャー企業に入社しました。学生時代は、資格取得に力を入れていました。取得したものは、基本情報技術者試験、Webクリエイター能力認定試験、情報処理技術者能力認定試験二級です。I T業界で働く上での基礎知識や、技術を学ぶことができました。
+        初めまして！岡崎 悠（おかざきゆう）です！呼ばれ方は「ゆー」がほとんどで、たまに君とか、ちゃん付けで呼ばれてました。そこはお任せします！平成１１年生まれの現在２０歳です。出身は高知県で、専門学校から東京に来ました。学生時代は、資格取得に力を入れました。取得したものは、「基本情報技術者試験」「Webクリエイター能力認定試験」「情報処理技術者能力認定試験二級」です。I T業界で働く上での基礎知識や、技術を学びました。基本的にインドアで、出かける日は１日中出かける事が多いです。
       </p>
     </div>
   </div>
@@ -20,7 +20,7 @@
 #aboutSection {
   background-color: #f5f5f5;
   width: 100%;
-  height: 300px;
+  height: auto;
   padding: 10px;
   text-align: center;
 }
@@ -38,9 +38,16 @@
 
 #aboutExplain {
   color: #707070;
+  font-family: 'Noto Sans', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: bold;
+  font-size: 12pt;
   word-break: break-all;
   line-height: 1.7;
   margin: auto;
-  width: 60%;
+  text-align: left;
+  width: 50%;
+  padding: 20px 0 50px 0;
 }
 </style>
