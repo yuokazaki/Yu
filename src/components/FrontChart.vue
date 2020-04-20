@@ -12,7 +12,7 @@ export default {
         datasets: [
           {
             label: 'Flont-End',
-            data: [50, 50, 20, 20, 30],
+            data: [5, 5, 2, 2, 3],
             backgroundColor: [
               'rgba(181, 26, 26, 0.5)',
             ],
@@ -31,7 +31,7 @@ export default {
 			scale:{
 				ticks:{
 					beginAtZero:true,
-					max:50,
+					max:5,
 					min:0
 				}
       }
