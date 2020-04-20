@@ -45,7 +45,7 @@ export default {
 #footerScroll {
   width: 25px;
   height: 25px;
-  border: 3px solid #06c1e6;
+  border: 3px solid black;
   border-radius: 50%;
   top: -15px;
   position: relative;
