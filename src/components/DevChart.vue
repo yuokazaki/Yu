@@ -11,7 +11,7 @@ export default {
         datasets: [
           {
             label: 'DevOps',
-            data: [20, 20, 30, 40, 20],
+            data: [2, 2, 3, 4, 2],
             backgroundColor: [
               'rgba(87, 16, 131, 0.5)',
             ],
@@ -30,7 +30,7 @@ export default {
 			scale:{
 				ticks:{
 					beginAtZero:true,
-					max:50,
+					max:5,
 					min:0
 				}
       }

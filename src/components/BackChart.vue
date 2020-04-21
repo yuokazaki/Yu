@@ -11,7 +11,7 @@ export default {
         datasets: [
           {
             label: 'Back-End',
-            data: [30, 20, 10, 30],
+            data: [3, 2, 1, 3],
             backgroundColor: [
               'rgba(15, 136, 57, 0.5)',
             ],
@@ -29,7 +29,7 @@ export default {
 			scale:{
 				ticks:{
 					beginAtZero:true,
-					max:50,
+					max:5,
 					min:0
 				}
       }
