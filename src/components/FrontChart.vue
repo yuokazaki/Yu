@@ -8,11 +8,11 @@ export default {
   data () {
     return {
       data: {
-        labels: ['HTML', 'CSS', 'JavScript', 'SCSS', 'Vue'],
+        labels: [],
         datasets: [
           {
             label: 'Flont-End',
-            data: [5, 5, 2, 2, 3],
+            data: [],
             backgroundColor: [
               'rgba(181, 26, 26, 0.5)',
             ],
@@ -39,7 +39,17 @@ export default {
         }
   },
   mounted () {
+    this.getSkills()
     this.renderChart(this.data, this.options)
+  },
+  methods: {
+    getSkills() {
+      const frontSkillInfo = this.$store.getters.getSkills('front-end')
+      frontSkillInfo.skills.forEach((skill) => {
+        this.data.labels.push(skill.name)
+        this.data.datasets[0].data.push(skill.score)
+      })
+    },
   }
 }
 </script>

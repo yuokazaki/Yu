@@ -7,6 +7,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     skillCategories: [],
+    loaded: false
   },
 
   getters: {
@@ -21,13 +22,14 @@ export default new Vuex.Store({
   mutations: {
     setSkillCategories(state, payload) {
       state.skillCategories = payload.skillCategories;
+      state.loaded = true
     },
   },
 
   actions: {
     async updateSkillCategories({commit}) {
       const skillCategories = [];
-      const res = await axios.get('https://us-central1-portfolio-c4799.cloudfunctions.net/skills')
+      const res = await axios.get('https://us-central1-portfolio-c4799.cloudfunctions.net/skillCategories')
       res.data.forEach((category) => {
         skillCategories.push(category);
       });
