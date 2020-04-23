@@ -1,5 +1,21 @@
 {
   "projects": {
     "default": "portfolio-c4799"
+  },
+  "targets": {
+    "portfolio-c4799": {
+      "hosting": {
+        "portfolio": [
+          "portfolio-c4799"
+        ]
+      }
+    },
+    "dev-portfolio-24b63": {
+      "hosting": {
+        "portfolio": [
+          "dev-portfolio-24b63"
+        ]
+      }
+    }
   }
 }
