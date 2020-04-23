@@ -19,6 +19,8 @@ import About from './components/About.vue'
 import Skill from './components/Skill.vue'
 import Vision from './components/Vision.vue'
 import Footer from './components/Footer.vue'
+import { mapActions,mapGetters } from 'vuex'
+
 
 export default {
   name: 'App',
@@ -29,8 +31,40 @@ export default {
     Skill,
     Vision,
     Footer
-  }
-}
+  },
+
+  data() {
+    return {
+      category: 'front-end',
+    };
+  },
+
+  computed: {
+    ...mapGetters({
+      get: 'getSkills',
+    }),
+  },
+
+  mounted() {
+    this.$store.dispatch('updateSkillCategories')
+  },
+
+  created () {
+    this.updateSkillCategories();
+  },
+
+  methods: {
+    ...mapActions(['updateSkillCategories']),
+
+    getSkill() {
+      this.get(this.category);
+    },
+
+    async test() {
+      return await this.updateSkillCategories();
+    },
+  },
+};
 </script>
 
 <style>

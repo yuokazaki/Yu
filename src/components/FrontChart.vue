@@ -8,20 +8,20 @@ export default {
   data () {
     return {
       data: {
-        labels: ['HTML', 'CSS', 'JavScript', 'SCSS', 'Vue'],
+        labels: [],
         datasets: [
           {
             label: 'Flont-End',
-            data: [50, 50, 20, 20, 30],
+            data: [],
             backgroundColor: [
               'rgba(181, 26, 26, 0.5)',
             ],
             borderColor: [
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
-              'rgba(153, 102, 255, 1)',
+              'rgba(181, 26, 26, 2)',
+              'rgba(181, 26, 26, 2)',
+              'rgba(181, 26, 26, 2)',
+              'rgba(181, 26, 26, 2)',
+              'rgba(181, 26, 26, 2)',
             ],
             borderWidth: 1
           }
@@ -31,7 +31,7 @@ export default {
 			scale:{
 				ticks:{
 					beginAtZero:true,
-					max:50,
+					max:5,
 					min:0
 				}
       }
@@ -39,7 +39,17 @@ export default {
         }
   },
   mounted () {
+    this.getSkills()
     this.renderChart(this.data, this.options)
+  },
+  methods: {
+    getSkills() {
+      const frontSkillInfo = this.$store.getters.getSkills('front-end')
+      frontSkillInfo.skills.forEach((skill) => {
+        this.data.labels.push(skill.name)
+        this.data.datasets[0].data.push(skill.score)
+      })
+    },
   }
 }
 </script>

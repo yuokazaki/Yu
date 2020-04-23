@@ -7,20 +7,19 @@ export default {
   data () {
     return {
       data: {
-        labels: ['Java', 'Ruby', 'RubyOnRails', 'MySQL'],
+        labels: [],
         datasets: [
           {
             label: 'Back-End',
-            data: [30, 20, 10, 30],
+            data: [],
             backgroundColor: [
               'rgba(15, 136, 57, 0.5)',
             ],
             borderColor: [
-              'rgba(15, 136, 57, 1)',
-              'rgba(255, 99, 132, 1)',
-              'rgba(54, 162, 235, 1)',
-              'rgba(255, 206, 86, 1)',
-              'rgba(75, 192, 192, 1)',
+              'rgba(15, 136, 57, 2)',
+              'rgba(15, 136, 57, 2)',
+              'rgba(15, 136, 57, 2)',
+              'rgba(15, 136, 57, 2)',
             ],
             borderWidth: 1
           }
@@ -30,7 +29,7 @@ export default {
 			scale:{
 				ticks:{
 					beginAtZero:true,
-					max:50,
+					max:5,
 					min:0
 				}
       }
@@ -38,7 +37,17 @@ export default {
         }
   },
   mounted () {
+    this.getSkills()
     this.renderChart(this.data, this.options)
+  },
+  methods: {
+    getSkills() {
+      const frontSkillInfo = this.$store.getters.getSkills('back-end')
+      frontSkillInfo.skills.forEach((skill) => {
+        this.data.labels.push(skill.name)
+        this.data.datasets[0].data.push(skill.score)
+      })
+    },
   }
 }
 </script>
