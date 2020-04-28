@@ -38,16 +38,16 @@ export default {
 #footerSection {
   background: linear-gradient(#80e1f7, #06c1e6);
   width: 100%;
-  height: 60px;
+  height: 70px;
   text-align: center;
 }
 
 #footerScroll {
   width: 25px;
   height: 25px;
-  border: 3px solid black;
+  border: 3px solid #80e1f7;
   border-radius: 50%;
-  top: -15px;
+  top: -10px;
   position: relative;
 }
 
@@ -59,7 +59,7 @@ export default {
   font-weight: bold;
   font-size: 12pt;
   text-shadow: 1px 1px 3px #000;
-  top: -10px;
+  top: -3px;
   position: relative;
 }
 </style>
