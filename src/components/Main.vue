@@ -22,7 +22,7 @@
 #mainSection {
   background: linear-gradient(#80e1f7, #06c1e6);
   width: 100%;
-  height: auto;
+  height: 450px;
   text-align: center;
   min-height: 200px;
   margin-top: 40px;
@@ -55,8 +55,8 @@
 
 #profilePicture {
   border-radius: 50%;
-  width: 110px;
-  height: 110px;
+  width: 200px;
+  height: 200px;
   padding: 20px 0;
 }
 </style>
